@@ -1,1 +1,29 @@
-
+#include <stdio.h>
+int main() {
+    int arr[100]; 
+    int n, target, found = 0;
+    printf("How many numbers do you want to enter?");
+    scanf("%d", &n);
+    printf("Enter %d numbers:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("\nEnter the number to search: ");
+    scanf("%d", &target);
+    //Linear Search logic
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == target) {
+            printf("%d -> FOUND\n", i+1, arr[i], target);
+            found = 1;
+            break;
+        } else {
+            printf("%d -> NOT FOUND\n", i+1, arr[i], target);
+        }
+    }
+    if (found == 1) {
+        printf("\nResult: Number was found!\n");
+    } else {
+        printf("\nResult: Number was not in the list.\n");
+    }
+    return 0;
+}
