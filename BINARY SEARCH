@@ -2,7 +2,7 @@
 int main() 
 {
     int n, i, key;
-    int arr[50];
+    int arr[100];
     int low, high, mid, found = 0;
     printf("Enter number of elements: ");
     scanf("%d", &n);
