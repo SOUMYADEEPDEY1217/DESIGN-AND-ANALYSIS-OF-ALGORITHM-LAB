@@ -1,0 +1,23 @@
+#include <stdio.h>
+long long factorial(int n) {
+    long long fact = 1;
+    for (int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+int main() {
+    int n, i, k;
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+    printf("Fibonacci Series:\n");
+    for (i = 1; i <= n; i++) {
+        long long fib = 0;
+        for (k = 0; k <= (i - 1) / 2; k++) {
+            fib += factorial(i - k - 1) / 
+                   (factorial(k) * factorial(i - 2*k - 1));
+        }
+        printf("%lld ", fib);
+    }
+    return 0;
+}
